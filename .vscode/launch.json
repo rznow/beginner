@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Debug Current File",
+          "type": "cppdbg",
+          "request": "launch",
+          // 根据当前打开的文件名动态生成 exe 路径
+          "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": false,
+          "MIMode": "gdb",
+          "miDebuggerPath": "gdb.exe",
+          "setupCommands": [
+              {
+                  "description": "Enable pretty-printing",
+                  "text": "-enable-pretty-printing",
+                  "ignoreFailures": true
+              }
+          ],
+          "preLaunchTask": "build current file"
+      }
+  ]
+}
